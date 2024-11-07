@@ -1,0 +1,7 @@
+# leetcode
+#python code
+class Solution:
+    def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
+       a= [item for sublist in matrix for item in sublist ]     #to change 2D array to 1D array
+       return target in a
+       
