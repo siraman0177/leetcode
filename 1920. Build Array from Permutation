@@ -18,3 +18,17 @@ class Solution:
             ans.append(nums[nums[i]])
         return ans
 --------------------------------------------------------
+// c code for this 
+/**
+ * Note: The returned array must be malloced, assume caller calls free().
+ */
+int* buildArray(int* nums, int n, int* returnSize) {
+    int *res=(int*)malloc(n*sizeof(int));
+    for(int i=0;i<n;i++)
+    {
+        res[i]=nums[nums[i]];
+    }
+    *returnSize=n;
+    return res;
+    
+}
