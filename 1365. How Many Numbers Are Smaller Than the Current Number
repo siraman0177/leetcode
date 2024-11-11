@@ -1,0 +1,12 @@
+# python code
+
+class Solution:
+    def smallerNumbersThanCurrent(self, nums: List[int]) -> List[int]:
+        new=[]
+        for i in range (len(nums)):                                    #cnt ki place matter karti hai for loop ke upper or niche hone se and sorting bhi karni thi but sort karne sse 
+            cnt=0                                                        answer nhi aa raha , bina sort kiye he sahi answer aa raha h
+            for j in range (len(nums)):
+                if nums[i]>nums[j]:
+                    cnt+=1
+            new.append(cnt)
+        return new
