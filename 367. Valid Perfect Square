@@ -1,0 +1,9 @@
+class Solution:
+    def isPerfectSquare(self, num: int) -> bool:
+        if int(num ** 0.5)*(num ** 0.5)==num:
+            return True 
+        else: 
+            return False
+
+
+#what is wrong with if sqrt(num)==abs(sqrt(num))
