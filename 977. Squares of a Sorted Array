@@ -1,0 +1,10 @@
+# python code
+
+class Solution:
+    def sortedSquares(self, nums: List[int]) -> List[int]:
+        dumdum=[]*len(nums)
+        for i in nums:
+            a=pow(i,2)
+            dumdum.append(a)
+            dumdum.sort()
+        return dumdum
