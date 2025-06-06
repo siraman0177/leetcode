@@ -3,3 +3,15 @@ class Solution:
         nums.sort(reverse=True)
         return nums[k-1]
         
+with  min heap approach with the help of chat gpt
+
+class Solution:
+    def findKthLargest(self, nums: List[int], k: int) -> int:
+        import heapq
+        # fuck=min_heap
+        fuck=[]
+        for i in nums:
+            heapq.heappush(fuck,i)
+            if len(fuck)>k:
+                heapq.heappop(fuck)
+        return fuck[0]
