@@ -1,0 +1,30 @@
+class Solution {
+public:
+
+    void reqsubset(vector<int>& nums,vector<int>& ans,int i, vector<vector<int>>&stored_sub )
+    {
+        if (i==nums.size())
+        {
+        stored_sub.push_back({ans});
+            return; 
+        }
+
+        //inclution
+        ans.push_back(nums[i]);
+         reqsubset(nums,ans,i+1,stored_sub);
+
+         //backtracking
+         ans.pop_back();
+
+         //exclude wala case 
+         reqsubset(nums,ans,i+1,stored_sub); 
+    }
+    vector<vector<int>> subsets(vector<int>& nums) {
+        vector<int>ans;
+        vector<vector<int>>stored_sub;
+        reqsubset(nums,ans,0,stored_sub);
+
+        return stored_sub;
+        
+    }
+};
